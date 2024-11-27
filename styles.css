@@ -1,0 +1,281 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header__logo {
+  flex: 0 0 150px;
+}
+
+.header__logo-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.header__search-input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.header__search-button {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header__hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.header__hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 2px 0;
+  transition: all 0.3s ease;
+}
+
+.header__nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header__nav-link:hover {
+  color: #007bff;
+}
+
+/* Main Content Styles */
+.main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.main__title {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Registration Form Styles */
+.registration {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.registration__title {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.registration__form-group {
+  margin-bottom: 1.5rem;
+}
+
+.registration__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.registration__input,
+.registration__textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.registration__textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.registration__submit-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.registration__submit-btn:hover {
+  background-color: #218838;
+}
+
+/* Listing Page Styles */
+.listing {
+  padding: 2rem;
+}
+
+.listing__title {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.listing__table-container {
+  overflow-x: auto;
+}
+
+.listing__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.listing__table th,
+.listing__table td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.listing__table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.listing__delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.listing__delete-btn:hover {
+  background-color: #c82333;
+}
+
+.listing__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.listing__pagination-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.listing__pagination-btn--active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .header__search {
+    margin-right: 1rem;
+  }
+
+  .header__search-input {
+    width: 200px;
+  }
+
+  .header__hamburger {
+    display: flex;
+  }
+
+  .header__nav {
+    display: none;
+    width: 100%;
+  }
+
+  .header__nav.active {
+    display: block;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__search-input {
+    width: 150px;
+  }
+
+  .header__logo {
+    flex: 0 0 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .listing__table {
+    font-size: 0.9rem;
+  }
+
+  .listing__table td,
+  .listing__table th {
+    padding: 0.5rem;
+  }
+}

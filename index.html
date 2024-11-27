@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="page">
+    <!-- Header Section -->
+    <header class="header">
+      <div class="header__top">
+        <!-- Logo -->
+        <div class="header__logo">
+          <img src="logo.png" alt="Company Logo" class="header__logo-img" />
+        </div>
+
+        <!-- Search Bar -->
+        <div class="header__search">
+          <input
+            type="text"
+            class="header__search-input"
+            placeholder="Search employees..."
+          />
+          <button class="header__search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <button class="header__hamburger">
+          <span class="header__hamburger-line"></span>
+          <span class="header__hamburger-line"></span>
+          <span class="header__hamburger-line"></span>
+        </button>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="register.html" class="header__nav-link"
+              >Employee Registration</a
+            >
+          </li>
+          <li class="header__nav-item">
+            <a href="listing.html" class="header__nav-link">Employee Listing</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="registration">
+        <h1 class="registration__title">Employee Registration</h1>
+        <form class="registration__form" id="employeeForm">
+          <div class="registration__form-group">
+            <label class="registration__label" for="name">Name:</label>
+            <input type="text" id="name" class="registration__input" required />
+          </div>
+
+          <div class="registration__form-group">
+            <label class="registration__label" for="position">Position:</label>
+            <input
+              type="text"
+              id="position"
+              class="registration__input"
+              required
+            />
+          </div>
+
+          <div class="registration__form-group">
+            <label class="registration__label" for="about">About:</label>
+            <textarea
+              id="about"
+              class="registration__textarea"
+              required
+            ></textarea>
+          </div>
+
+          <div class="registration__form-group">
+            <label class="registration__label" for="joining_date"
+              >Joining Date:</label
+            >
+            <input
+              type="date"
+              id="joining_date"
+              class="registration__input"
+              required
+            />
+          </div>
+
+          <button type="submit" class="registration__submit-btn">
+            Register Employee
+          </button>
+        </form>
+      </div>
+      <div class="listing">
+        <h1 class="listing__title">Employee List</h1>
+        <div class="listing__table-container">
+          <table class="listing__table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>About</th>
+                <th>Joining Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="employeeTableBody">
+              <!-- Table content will be dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+        <div class="listing__pagination" id="pagination">
+          <!-- Pagination buttons will be dynamically added -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <p class="footer__copyright">© 2024 Your Name. All rights reserved.</p>
+    </footer>
+    <script src="listing.js"></script>
+    <script src="registration.js"></script>
+  </body>
+</html>
